@@ -58,22 +58,16 @@ body{
     margin: 0;
 }
 
-#likes{
-
+#card-footer{
+    display: flex;
+    justify-content: space-between;
 }
 
-#description{
-
-}
-
-#heart{
-
+.far, .fas{
+   margin-top: 8px;
 }
 
 #comment{
-
-}
-
-#menu{
-
+    width: 200px;
+    height: 30px;
 }
