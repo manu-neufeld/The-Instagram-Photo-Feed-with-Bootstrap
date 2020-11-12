@@ -9,90 +9,168 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap" rel="stylesheet">     
 </head>
 <body>
     <div class="card">
 <!--HEADER-->
         <div class="card-header">
             <div class="container">
-            <div class="row">
-<!--LEFT SIDE INSTAGRAM AND INCON-->
-                 <div class="col">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <div class="col-6">
-                    <p> Instagram</p>
-                </div>
-<!--RIGTH SIDE COMMENT AND SETTINGS-->
-                <div class="col">
-                    <button>Create a new Post</button> 
-                </div>
-                <div class="col">
-                        <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-cogs"></i>
+                <div class="row">
+    <!--LEFT SIDE INSTAGRAM AND INCON-->
+                    <div class="col" id="icon-text">
+                        <p id="text-header"> <i class="fab fa-instagram" id="icon"></i> Instagram</p>
+                    </div>
+    <!--RIGTH SIDE COMMENT AND SETTINGS-->
+                    <div class="col" id="modal-settings">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                        Create a new post
                         </button>
-                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">New post</a>
-                            <a class="dropdown-item" href="#">Settings</a>
-                            <a class="dropdown-item" href="#">Log out</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Your new post</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><textarea class= "rounded" name="mensaje" placeholder="Post" id="textarea"></textarea></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        </div>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-cogs"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">New post</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Log out</a>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
+        
         <div class="card-body">
-<!--INDEX-->
-                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-bars"></i></a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="far fa-minus-square"></i></a>
-                    </li>
-                </ul>
-                <div class="tab-content row" id="pills-tabContent">
-<!--THREE IMAGES-->
+        
+        <!-- INDEX -->
+            <ul class="nav justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="far fa-minus-square"></i></a>
+            </li>
+            </ul>
+
+            <!-- BODY CARDS -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="col-4 offset-4">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <!--CARD ONE-->
-                        <div class="card" style="fit-content">
-                            <h5 class="card-title">Card title</h5>
-                            <div class="card-body">
-                                <img src="./images/first-image.jpg" class="card-img-top" alt="...">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    
-                    <!--CARD TWO-->
-                        <div class="card" style="fit-content">
-                            <img src="./images/second-image.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    
-                    <!--CARD THREE-->
-                        <div class="card" style="fit-content">
-                            <img src="./images/third image.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div> 
-                    </div>
-<!--NINE IMAGES-->
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...
-                    
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <!--CARD ONE-->
+                                <div class="card" style="fit-content" id="post">
+                                    <div class="card-title">
+                                        <h5  id="title">My first photo</h5>
+                                        <p id="index">1/9</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./images/image1.jpg" class="card-img-top" alt="...">
+                                        <p id="likes">23 Likes</p>
+                                        <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p id="heart"><i class="far fa-heart"></i><textarea class="rounded" placeholder="Comment" name="comment" id="comment"></textarea></p>
+                                        <p id="menu"><i class="fas fa-ellipsis-v"></i></p>
+                                    </div>
+                                </div>
+                            
+                            <!--CARD TWO-->
+                                <div class="card" style="fit-content" id="post">
+                                    <div class="card-title">
+                                        <h5 id="title">Autumn</h5>
+                                        <p id="index">2/9</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./images/image2.jpg" class="card-img-top" alt="...">
+                                        <p class="card-text" id="description">Lorem ipsum dolor sit amet consectetur adipiscing elit in eros, cursus mauris praesent tortor vivamus aliquet placerat faucibus duis</p>
+                                        <p id="heart"><i class="far fa-heart"></i><textarea class="rounded" placeholder="Comment" name="comment" id="comment"></textarea></p>
+                                        <p id="menu"><i class="fas fa-ellipsis-v"></i></p>
+                                    </div>
+                                </div>
+                            
+                            <!--CARD THREE-->
+                                <div class="card" style="fit-content" id="post">
+                                    <div class="card-title">
+                                        <h5 id="title">Football</h5>
+                                        <p id="index">3/9</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="./images/image3.jpg" class="card-img-top" alt="...">
+                                        <p>76 Likes</p>
+                                        <p class="card-text" id="description">Lorem ipsum dolor sit amet consectetur adipiscing elit in eros, cursus mauris praesent tortor vivamus aliquet placerat faucibus duis, mollis curabitur sapien litora lacinia eleifend elementum tristique.</p>
+                                        <p id="heart"><i class="far fa-heart"></i><textarea class="rounded" placeholder="Comment" name="comment" id="comment"></textarea></p>
+                                        <p id="menu"><i class="fas fa-ellipsis-v"></i></p>
+                                    </div>
+                                </div>
+                            </div> 
                     </div>
                 </div>
+
+                    
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                     <!-- NINE CARDS -->
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="./images/image1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image2.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image3.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                     <div class="card-group">
+                        <div class="card">
+                            <img src="./images/image4.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image5.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image6.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="./images/image7.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image8.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card">
+                            <img src="./images/image9.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
